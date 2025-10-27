@@ -62,4 +62,21 @@ button:hover {
 
 #resultado p {
     margin: 0;
+
+}
+/* --- ESTILOS RESPONSIVOS PARA MÓVIL --- */
+@media (max-width: 600px) {
+    
+    .controles {
+        /* Apila los elementos (labels, selects, button) verticalmente */
+        flex-direction: column;
+        
+        /* Hace que los elementos ocupen todo el ancho disponible */
+        align-items: stretch;
+    }
+
+    /* Opcional: Asegura que el texto de las etiquetas esté centrado */
+    .controles label {
+        text-align: center;
+    }
 }
