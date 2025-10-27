@@ -1,0 +1,65 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+select, button {
+    font-size: 1em;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+/* IMPORTANTE: El contenedor del grafo DEBE tener un alto. */
+#cy {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#resultado {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#resultado p {
+    margin: 0;
+}

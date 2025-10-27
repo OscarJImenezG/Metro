@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas del Metro (NetworkX a JS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Calculador de Rutas del Metro (JS)</h1>
+
+    <div class="controles">
+        <label for="inicio-select">Inicio:</label>
+        <select id="inicio-select"></select>
+
+        <label for="fin-select">Fin:</label>
+        <select id="fin-select"></select>
+
+        <button id="calcular-btn">Calcular Ruta</button>
+    </div>
+
+    <div id="cy"></div>
+
+    <h2>Ruta más corta:</h2>
+    <div id="resultado">
+        <p>Selecciona dos estaciones y presiona "Calcular Ruta".</p>
+    </div>
+
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    
+    <script src="metro_data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
