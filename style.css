@@ -1,105 +1,83 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 20px; /* Un padding de 10px o 15px podría verse mejor en móvil */
-    background-color: #f4f4f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 h1, h2 {
-    text-align: center;
-    color: #333;
+    text-align: center;
+    color: #333;
 }
 
 .controles {
-    display: flex;
-    
-    /* --- ESTILOS "MOBILE-FIRST" (POR DEFECTO) --- */
-    flex-direction: column;  /* Apilado vertical por defecto */
-    align-items: stretch;    /* Se estiran para ocupar todo el ancho */
-    gap: 10px; /* Reducimos el espacio entre elementos para móvil */
-    
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-/* Centramos las etiquetas en la vista móvil */
-.controles label {
-    text-align: center;
-    margin-top: 5px; /* Pequeño espacio extra arriba de las etiquetas */
-}
-
-/* Hacemos que la primera etiqueta no tenga margen superior */
-.controles label:first-of-type {
-    margin-top: 0;
-}
-
 
 select, button {
-    font-size: 1em;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 1em;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-/* IMPORTANTE: El contenedor del grafo */
+/* IMPORTANTE: El contenedor del grafo DEBE tener un alto. */
 #cy {
-    width: 100%;
-    /* Reducimos la altura para que quepa mejor en móvil */
-    height: 450px; 
-    border: 1px solid #ddd;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #resultado {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #007bff;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
 #resultado p {
-    margin: 0;
+    margin: 0;
 }
 
 
-/* --- MEDIA QUERY PARA ESCRITORIO (TABLETS Y MÁS) --- */
-/* Se aplica solo si el ancho es 601px O MÁS */
-@media (min-width: 601px) {
+/* --- ESTILOS RESPONSIVOS PARA MÓVIL --- */
+@media (max-width: 600px) {
     
     .controles {
-        /* Volvemos al layout horizontal */
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px; /* Restauramos el gap original */
+        /* Apila los elementos (labels, selects, button) verticalmente */
+        flex-direction: column;
+        
+        /* Hace que los elementos ocupen todo el ancho disponible */
+        align-items: stretch;
     }
 
+    /* Opcional: Asegura que el texto de las etiquetas esté centrado */
     .controles label {
-        text-align: left; /* Alineamos etiquetas a la izquierda */
-        margin-top: 0; /* Quitamos el margen superior */
+        text-align: center;
     }
-
-    #cy {
-        height: 600px; /* Restauramos altura original en escritorio */
-    }
 }
-
